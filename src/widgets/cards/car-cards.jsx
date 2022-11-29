@@ -8,7 +8,7 @@ import {
 
 export function CarsCard({ img, color, price, title, description }) {
   return (
-    <Card className="rounded-2xl shadow-lg shadow-gray-500/10">
+    <Card className="rounded-2xl shadow-lg shadow-gray-500">
       <CardBody className="px-6 text-center">
         <Typography>
           <img src={img} alt="Car-Photo" className="h-full w-full shadow-lg rounded-2xl shadow-gray-500/25"/>
