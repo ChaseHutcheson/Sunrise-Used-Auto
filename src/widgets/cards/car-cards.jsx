@@ -9,10 +9,11 @@ import {
 export function CarsCard({ img, color, price, title, description }) {
   return (
     <Card className="rounded-2xl shadow-lg shadow-gray-500/10">
-      <CardHeader>
-        <img src={img} alt="Car-Photo" className="h-full w-full shadow-lg shadow-gray-500/25"/>
-      </CardHeader>
-      <CardBody className="px-8 text-center">
+      <CardBody className="px-6 text-center">
+        <Typography>
+          <img src={img} alt="Car-Photo" className="h-full w-full shadow-lg rounded-2xl shadow-gray-500/25"/>
+          <div className="text-gray-50">.</div>
+        </Typography>
         <Typography variant="h5" className="mb-2 text-left" color="blue-gray">
           {price} {title}
         </Typography>
