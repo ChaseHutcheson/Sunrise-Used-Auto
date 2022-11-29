@@ -1,4 +1,4 @@
-import { Home, Cars, SignIn, SignUp } from "@/pages";
+import { Home, Cars, SignIn, SignUp, Calc } from "@/pages";
 import {
   HomeIcon,
   TruckIcon,
@@ -30,6 +30,12 @@ export const routes = [
     name: "Sign Up",
     path: "/sign-up",
     element: <SignUp />,
+  },
+  {
+    icon: UserPlusIcon,
+    name: "Loan Calculator",
+    path: "/loan-calc",
+    element: <Calc />,
   }
 ];
 
