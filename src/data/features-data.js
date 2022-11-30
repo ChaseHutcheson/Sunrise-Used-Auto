@@ -5,7 +5,7 @@ import {
 
 export const featuresData = [
   {
-    color: "Blue",
+    color: "blue",
     title: "Awarded Agency",
     icon: TrophyIcon,
     description:

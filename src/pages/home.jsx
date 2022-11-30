@@ -38,7 +38,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section className="-mt-32 bg-blue-100 px-4 pb-20 pt-4">
+      <section className="-mt-32 bg-blue-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
             {featuresData.map(({ color, title, icon, description }) => (
@@ -72,7 +72,7 @@ export function Home() {
                 <br />
                 We dedicate our time to making sure that your matters are taken care of quickly and effectively.
               </Typography>
-              <Button variant="gradient" color="white">read more</Button>
+              <Button variant="gradient" className="bg-blue-100">read more</Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg shadow-gray-500/10">
