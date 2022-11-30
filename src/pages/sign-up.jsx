@@ -15,7 +15,7 @@ export function SignUp() {
   return (
     <>
       <img
-        src="/img/Sign_Up_Wallpaper.jpg"
+        src="/img/Wallpapers/Sign_Up_Wallpaper.jpg"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
