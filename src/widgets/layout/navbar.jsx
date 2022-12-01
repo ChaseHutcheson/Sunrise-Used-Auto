@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-export function Navbar({ brandName, routes, action }) {
+export function Navbar({ brandName, routes}) {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -86,17 +86,12 @@ export function Navbar({ brandName, routes, action }) {
 }
 
 Navbar.defaultProps = {
-  brandName: "Sunrise Used Auto",
-  action: (
-    <a>
-    </a>
-  ),
+  brandName: "Sunrise Used Automobiles",
 };
 
 Navbar.propTypes = {
   brandName: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
-  action: PropTypes.node,
 };
 
 Navbar.displayName = "/src/widgets/layout/navbar.jsx";

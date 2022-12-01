@@ -17,7 +17,7 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('img\\Img.jpg')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('img/Wallpapers/Home_Page_Banner.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/50 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
@@ -38,7 +38,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section className="-mt-32 bg-blue-100 px-4 pb-20 pt-4">
+      <section className=" -mt-24 bg-blue-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
             {featuresData.map(({ color, title, icon, description }) => (
@@ -72,14 +72,14 @@ export function Home() {
                 <br />
                 We dedicate our time to making sure that your matters are taken care of quickly and effectively.
               </Typography>
-              <Button variant="gradient" color="white">read more</Button>
+              <Button variant="gradient" className="bg-blue-100">read more</Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg shadow-gray-500/10">
                 <CardHeader className="relative h-56">
                   <img
                     alt="Card Image"
-                    src="/img/Car selling Image.jpg"
+                    src="/img/Web-Design/Car selling Image.jpg"
                     className="h-full w-full"
                   />
                 </CardHeader>
@@ -146,8 +146,8 @@ export function Home() {
               </Card>
             ))}
           </div>
-          <PageTitle heading="Want to work with us?">
-            Complete this form and we will get back to you in 24 hours.
+          <PageTitle heading="Want to be a part of the team?">
+            Fill out this for and will respond in 24 - 48 hours.
           </PageTitle>
           <form className="mx-auto mt-12 max-w-3xl text-center">
             <div className="mb-8 flex gap-8">

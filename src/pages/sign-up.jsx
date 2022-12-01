@@ -15,7 +15,7 @@ export function SignUp() {
   return (
     <>
       <img
-        src="/img/background-2.jpg"
+        src="/img/Wallpapers/Sign_Up_Wallpaper.jpg"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
@@ -44,7 +44,7 @@ export function SignUp() {
             </div>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button variant="gradient" fullWidth>
+            <Button ripple={false} variant={"gradient"} fullWidth>
               Sign Up
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">

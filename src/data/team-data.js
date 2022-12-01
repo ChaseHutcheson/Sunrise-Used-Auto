@@ -1,6 +1,6 @@
 export const teamData = [
   {
-    img: "/img/team-1.jpg",
+    img: "No_Image_Yet",
     name: "Noah Diana",
     position: "CEO",
     socials: [
@@ -19,12 +19,12 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/Jon.png",
+    img: "/img/Team/Jon.png",
     name: "Jon Factor",
     position: "Mascot",
   },
   {
-    img: "/img/team-3.jpg",
+    img: "No_Image_Yet",
     name: "Chase Hutcheson",
     position: "Inventory Manager",
   },
