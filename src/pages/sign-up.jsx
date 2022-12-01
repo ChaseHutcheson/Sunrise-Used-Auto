@@ -10,8 +10,19 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { SimpleFooter } from "@/widgets/layout";
-
+import { useState } from "react";
 export function SignUp() {
+
+  const [name, setName] = useState('');
+  const [mail, setMail] = useState('');
+  const [Pass, setPass] = useState('');
+
+  const test = async () => {
+
+    console.log(name, mail, Pass)
+
+  }
+  
   return (
     <>
       <img
@@ -31,20 +42,21 @@ export function SignUp() {
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
-            <Input variant="standard" label="Name" size="lg" />
-            <Input variant="standard" type="email" label="Email" size="lg" />
+            <Input variant="standard" label="Name" onChange={setName}size="lg" />
+            <Input variant="standard" type="email" label="Email"onChange={setMail} size="lg" />
             <Input
               variant="standard"
               type="password"
               label="Password"
               size="lg"
+              onChange={setPass}
             />
             <div className="-ml-2.5">
               <Checkbox label="I agree the Terms and Conditions" />
             </div>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button ripple={false} variant={"gradient"} fullWidth>
+            <Button ripple={false} onClick={test} variant={"gradient"} fullWidth>
               Sign Up
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
