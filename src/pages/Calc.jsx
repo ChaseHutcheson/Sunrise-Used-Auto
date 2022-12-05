@@ -1,90 +1,69 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import {
   Card,
-  CardBody,
   CardHeader,
-  Typography,
-  Button,
+  CardBody,
+  CardFooter,
   Input,
-  Textarea,
+  Checkbox,
+  Button,
+  Typography,
 } from "@material-tailwind/react";
-import { UsersIcon } from "@heroicons/react/24/solid";
-import { PageTitle, Footer } from "@/widgets/layout";
-import { FeatureCard, TeamCard } from "@/widgets/cards";
-import { featuresData, teamData, contactData } from "@/data";
-
+import { SimpleFooter } from "@/widgets/layout";
+import { useState } from "react";
 export function Calc() {
+
+  const [name, setName] = useState('');
+  const [mail, setMail] = useState('');
+  const [Pass, setPass] = useState('');
+
+  const test = async () => {
+
+    console.log(name, mail, Pass)
+
+  }
+  
   return (
     <>
-      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('img/Wallpapers/Car_Inv_Banner.jpg')] bg-cover bg-center" />
-        <div className="absolute top-0 h-full w-full bg-black/50 bg-cover bg-center" />
-        <div className="max-w-8xl container relative mx-auto">
-          <div className="flex flex-wrap items-center">
-            <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-              <Typography
-                variant="h1"
-                color="white"
-                className="mb-6 font-black"
-              >
-                Our Loan Calculator!
-              </Typography>
-              <Typography variant="lead" color="white" className="opacity-80">
-                Sunrise Used Auto belives that all of our clients should have an easy and accesible calculator to determine if our loans fit their intrests.
-                Have fun Calculating!
-              </Typography>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section className="-mt-32 bg-blue-100 px-4 pb-20 pt-4">
-        <div className="container mx-auto">
-          <div className="mt-32 flex flex-wrap items-center">
-            
-          </div>
-        </div>
-      </section>
-      
-      <section className="relative bg-blue-gray-50/50 py-24 px-4">
-        <div className="container mx-auto">
-          <PageTitle heading="Come Down Today!">
-            We pride ourselves in delivering the upmost of customer care we can.
-          </PageTitle>
-          <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-            {contactData.map(({ title, icon, description }) => (
-              <Card
-                key={title}
-                color="transparent"
-                shadow={false}
-                className="text-center text-blue-gray-900"
-              >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-white shadow-lg shadow-gray-500/20">
-                  {React.createElement(icon, {
-                    className: "w-5 h-5",
-                  })}
-                </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2">
-                  {title}
-                </Typography>
-                <Typography className="font-normal text-blue-gray-500">
-                  {description}
-                </Typography>
-              </Card>
-            ))}
-          </div>
-          <PageTitle heading="Want to work with us?">
-            Complete this form and we will get back to you in 24 hours.
-          </PageTitle>
+      <img
+        src="img\Wallpapers\Calcs.jpg"
+        className="absolute inset-0 z-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
+      <div className="container mx-auto p-4">
+        
+      <Card className="absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4">
+          <CardHeader
+            variant="gradient"
+            color="gray"
+            className="mb-4 grid h-28 place-items-center"
+          >
+            <Typography variant="h3" color="light">
+              Claculator
+            </Typography>
+          </CardHeader>
+          <CardBody className="flex flex-col gap-4">
 
-        </div>
-      </section>
-      <div className="bg-blue-gray-50/50">
-        <Footer />
+            <Input variant="standard"  label="Car Price" size="lg" />
+            <Input variant="standard" label="Down Payment"size="lg" />
+            <Input variant="standard" label="Length (months)"size="lg" />
+            <Input variant="standard" label="Creidt Score"size="lg" />
+
+          </CardBody>
+          <CardFooter className="pt-0">
+            <Button variant="gradient" fullWidth color="gray">
+              Submit
+            </Button>
+            
+          </CardFooter>
+        </Card>
+
+      </div>
+      <div className="container absolute bottom-6 left-2/4 z-10 mx-auto -translate-x-2/4 text-white">
+        <SimpleFooter />
       </div>
     </>
   );
 }
 
 export default Calc;
-
-//npm run dev
