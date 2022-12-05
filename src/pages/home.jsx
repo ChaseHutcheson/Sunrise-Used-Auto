@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Card,
   CardBody,
@@ -12,9 +12,23 @@ import { UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
-import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser';
 
 export function Home() {
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'template_pc3mt9o', form.current, 'jzA73c5tFUqINj7QC')
+      .then((result) => {
+          console.log(result.text);
+          e.target.reset()
+      }, (error) => {
+          console.log(error.text);
+      });
+    
+  }
+
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
@@ -150,13 +164,13 @@ export function Home() {
           <PageTitle heading="Want to be a part of the team?">
             Fill out this for and will respond in 24 - 48 hours.
           </PageTitle>
-          <form className="mx-auto mt-12 max-w-3xl text-center">
+          <form onSubmit={sendEmail} className="mx-auto mt-12 max-w-3xl text-center">
             <div className="mb-8 flex gap-8">
-              <Input variant="standard" size="lg" label="Full Name" />
-              <Input variant="standard" size="lg" label="Email Address" />
+              <Input type="text" variant="standard" size="lg" label="Full Name" name="name"/>
+              <Input type="email" variant="standard" size="lg" label="Email Address" name="email"/>
             </div>
-            <Textarea variant="standard" size="lg" label="Message" rows={8} />
-            <Button variant="gradient" size="lg" className="mt-8 bg-blue-100">
+            <Textarea variant="standard" size="lg" label="Message" rows={8} name="message"/>
+            <Button type="submit" variant="gradient" size="lg" className="mt-8 bg-blue-100">
               Send Message
             </Button>
           </form>

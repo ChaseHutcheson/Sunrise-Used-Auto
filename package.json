@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@heroicons/react": "^2.0.12",
     "@material-tailwind/react": "^1.2.4",
     "emailjs": "^4.0.1",
