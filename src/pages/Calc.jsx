@@ -14,24 +14,35 @@ import { useState } from "react";
 export function Calc() {
 
   const [Price, setPrice] = useState('');
-  const [Down, setDown] = useState('');
   const [Length, setLength] = useState('');
   const [credit, setCredit] = useState('');
   
-  
+  const cred = event => {setCredit(event.target.value); };
+  const prices = event => {setPrice(event.target.value); };
+  const lengths = event => {setLength(event.target.value); };
+
   const sub = async () => {
+    
 
-    inputs.className = "collapse"
 
+
+    const everything = {credit, Price, Length}
+    console.log(everything)
+    const responce = await fetch('http://127.0.0.1:5000/result', {
+        method: 'POST',
+        headers: {
+            "credit": credit,
+            'price': Price,
+            'length': Length,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(everything)
+    })
   }
 
   
-  const back = async () => {
 
-    outputs.className = "collapse"
-    inputs.className = "visible"
-
-  }
+  
 
   return (
     <>
@@ -42,22 +53,22 @@ export function Calc() {
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
       <div className="container mx-auto p-4">
         
-      <Card className="absolute top-2/4 left-2/4 w-full max-w-[42rem] -translate-y-2/4 -translate-x-2/4" id = "inputs">
+      <Card className="absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4" id = "inputs">
           <CardHeader
             variant="gradient"
             color="green"
             className="mb-4 grid h-28 place-items-center"
           >
-            <Typography variant="h3" color="light">
+            <Typography variant="h3" >
               Calculator
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
 
-            <Input variant="standard"  label="Car Price" size="lg" />
+            <Input variant="standard"  label="Car Price" size="lg" onChange={prices} />
             <Input variant="standard" label="Down Payment"size="lg" />
-            <Input variant="standard" label="Length (months)"size="lg" />
-            <Input variant="standard" label="Creidt Score"size="lg" />
+            <Input variant="standard" label="Length (months)"size="lg"onChange={lengths} />
+            <Input variant="standard" label="Credit Score"size="lg"onChange={cred} />
 
           </CardBody>
           <CardFooter className="pt-0">
@@ -67,41 +78,18 @@ export function Calc() {
             
           </CardFooter>
         </Card>
+        
 
-        <Card className="absolute top-2/4 left-2/4 w-full max-w-[42rem] -translate-y-2/4 -translate-x-2/4" id = "outputs">
-          <CardHeader
-            variant="gradient"
-            color="green"
-            className="mb-4 grid h-28 place-items-center"
-          >
-            <Typography variant="h3" color="light">
-              Results
-            </Typography>
-          </CardHeader>
-          <CardBody className="flex flex-col gap-4">
-
-            <Input variant="standard"  label="Car Price" size="lg" />
-            <Input variant="standard" label="Down Payment"size="lg" />
-            <Input variant="standard" label="Length (months)"size="lg" />
-            <Input variant="standard" label="Creidt Score"size="lg" />
-
-          </CardBody>
-          <CardFooter className="pt-0">
-            <Button variant="gradient" fullWidth color="green" onClick={back}>
-            back
-            </Button>
-            
-          </CardFooter>
-        </Card>
+        
 
       </div>
       <div className="container absolute bottom-6 left-2/4 z-10 mx-auto -translate-x-2/4 text-white">
         <SimpleFooter />
       </div>
     </>
-  );
+  )
 }
 
 export default Calc;
 
-// 
+// npm run dev
