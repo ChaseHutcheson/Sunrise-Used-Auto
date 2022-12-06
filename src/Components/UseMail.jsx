@@ -27,12 +27,12 @@ const ContactForm = () => {
       method="POST"
       target="_blank"
     >
-      <div className="mb-3 pt-0">
+      <div className="mb-3 pt-0 mt-10">
         <input
           type="text"
           placeholder="Your name"
           name="name"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-transparent rounded text-sm border-0 border-b-2 border-b-blue-100 focus:outline-none focus:ring w-full"
           required
         />
       </div>
