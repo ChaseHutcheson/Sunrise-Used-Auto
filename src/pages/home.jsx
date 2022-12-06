@@ -12,6 +12,7 @@ import { UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
+import ContactForm from "@/Components/UseMail";
 
 
 export function Home() {
@@ -164,16 +165,7 @@ export function Home() {
           <PageTitle heading="Want to be a part of the team?">
             Fill out this for and will respond in 24 - 48 hours.
           </PageTitle>
-          <form onSubmit={sendEmail} className="mx-auto mt-12 max-w-3xl text-center">
-            <div className="mb-8 flex gap-8">
-              <Input type="text" variant="standard" size="lg" label="Full Name" name="name"/>
-              <Input type="email" variant="standard" size="lg" label="Email Address" name="email"/>
-            </div>
-            <Textarea variant="standard" size="lg" label="Message" rows={8} name="message"/>
-            <Button type="submit" variant="gradient" size="lg" className="mt-8 bg-blue-100">
-              Send Message
-            </Button>
-          </form>
+          <ContactForm />
         </div>
       </section>
       <div className="bg-blue-gray-50/50">
