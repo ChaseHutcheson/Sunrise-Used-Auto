@@ -14,8 +14,8 @@ const ContactForm = () => {
   if (submitted) {
     return (
       <>
-        <div className="text-2xl">Thank you!</div>
-        <div className="text-md">We'll be in touch soon.</div>
+        <div className="text-2xl mt-10 text-center">Thank you!</div>
+        <div className="text-md text-center mt-2">We'll be in touch soon.</div>
       </>
     );
   }
@@ -32,30 +32,31 @@ const ContactForm = () => {
           type="text"
           placeholder="Your name"
           name="name"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-transparent rounded text-sm border-0 border-b-2 border-b-blue-100 focus:outline-none focus:ring w-full"
+          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-transparent text-sm border-0 border-b-2 border-b-blue-100 focus:outline-none w-full"
           required
         />
       </div>
-      <div className="mb-3 pt-0">
+      <div className="mb-3 pt-0 mt-5">
         <input
           type="email"
           placeholder="Email"
           name="email"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-transparent text-sm border-0 border-b-2 border-b-blue-100 focus:outline-none w-full"
           required
         />
       </div>
-      <div className="mb-3 pt-0">
+      <div className="mb-3 pt-0 mt-5">
         <textarea
           placeholder="Your message"
           name="message"
-          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-transparent text-sm border-0 border-b-2 border-b-blue-100 focus:outline-none w-full resize-none"
           required
+          rows={8}
         />
       </div>
-      <div className="mb-3 pt-0">
+      <div className="mb-3 pt-0 con">
         <button
-          className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className=" bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="submit"
         >
           Send a message
