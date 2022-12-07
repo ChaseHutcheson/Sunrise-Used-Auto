@@ -9,14 +9,14 @@ export const featuresData = [
     title: "Awarded Agency",
     icon: TrophyIcon,
     description:
-      "Sunrise Used Auto has been recognized by the BBC for our great customer service.",
+      "Sunrise Used Auto has been recognized by the BBB for our great customer service.",
   },
   {
     color: "teal",
     title: "4.6 / 5 Stars",
     icon: StarIcon,
     description:
-      "We have excellent reviews from our past customers!",
+      "We have excellent reviews from our past customers.",
   },
 ];
 

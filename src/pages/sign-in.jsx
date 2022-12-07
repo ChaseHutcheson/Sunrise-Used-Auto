@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Card,
@@ -10,8 +11,30 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { SimpleFooter } from "@/widgets/layout";
+import { firestore } from "./Firebase/firebase"
+import { signInWithEmailAndPassword} from "firebase/auth"
+import { auth } from "./Firebase/firebase"
+import AuthDetails from "./Firebase/AuthDetails";
+import { isEmpty } from "@firebase/util";
+
 
 export function SignIn() {
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const signIn = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredentials) => {
+      console.log(userCredentials)
+    }).catch((error => {
+      console.log(error)
+    }))
+    isEmpty(setEmail)
+    isEmpty(setPassword)
+  }
+
   return (
     <>
       <img
@@ -20,6 +43,7 @@ export function SignIn() {
       />
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
       <div className="container mx-auto p-4">
+        <form onSubmit={signIn}>
         <Card className="absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4">
           <CardHeader
             variant="gradient"
@@ -30,22 +54,31 @@ export function SignIn() {
               Sign In
             </Typography>
           </CardHeader>
-          <CardBody className="flex flex-col gap-4">
-            <Input variant="standard" type="email" label="Email" size="lg" />
-            <Input
-              variant="standard"
-              type="password"
-              label="Password"
-              size="lg"
+          <CardBody className="flex flex-col gap-4">  
+            <input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-transparent text-sm border-0 border-b-2 border-b-blue-400 focus:outline-none w-full"
+            required
             />
-            <div className="-ml-2.5">
-              <Checkbox label="Remember Me" />
-            </div>
+          <input
+            type="text"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className="px-3 py-3 mt-3 placeholder-gray-400 text-gray-600 relative bg-transparent text-sm border-0 border-b-2 border-b-blue-400 focus:outline-none w-full"
+            required
+            />
+              <div className="-ml-2.5 -mb-7">
+                <Checkbox label="Remember Me" />
+              </div>
           </CardBody>
-          <CardFooter className="pt-0">
-            <Button variant="gradient" fullWidth>
+          <CardFooter className="grid grid-cols-0 grid-rows-2">
+            <button type="submit" className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
               Sign In
-            </Button>
+            </button>
             <Typography variant="small" className="mt-6 flex justify-center">
               Don't have an account?
               <Link to="/sign-up">
@@ -59,14 +92,16 @@ export function SignIn() {
                 </Typography>
               </Link>
             </Typography>
+            <AuthDetails />
           </CardFooter>
         </Card>
+        </form>
       </div>
       <div className="container absolute bottom-6 left-2/4 z-10 mx-auto -translate-x-2/4 text-white">
         <SimpleFooter />
       </div>
     </>
   );
-}
+};
 
 export default SignIn;
