@@ -6,7 +6,7 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/solid";
-import AuthDetails from "./pages/Firebase/AuthDetails";
+import { getAuth, onAuthStateChanged } from "firebase/auth"
 
 
 export const routes = [
@@ -42,14 +42,18 @@ export const routes = [
   }
 ];
 
-if (AuthDetails) {
+const auth = getAuth();
 
-  routes.push({
+onAuthStateChanged(auth, (user) => {
+  if (user){
+    routes.push({
     icon: UserCircleIcon,
     name: "Account",
     path: "/account",
     element: "to Do"
-  })
-}
+    })
+    
+  }
+})
 
 export default routes;
