@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Navbar } from "@/widgets/layout";
 import routes from "@/routes";
+import MessengerCustomerChat from "react-messenger-customer-chat"
 
 function App() {
   return (
@@ -15,6 +16,12 @@ function App() {
         )}
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
+        <MessengerCustomerChat
+    pageId="100088634918057"
+    appId="<APP_ID>"
+    htmlRef="<REF_STRING>"
+  />,
+  document.getElementById('demo')
     </>
   );
 }
