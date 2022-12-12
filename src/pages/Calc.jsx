@@ -33,14 +33,11 @@ export function Calc() {
       intrest = .0975
     else if (credit > 300)
       intrest = .1284
-    else
-      intrest = 1
-      console.log("ERROR")
     
       
-    const monthly = (Price * intrest) / (1 - (1 + intrest)^(-Length))
+    const monthly = (Price * intrest) / (1 - (1 + intrest)**(-Length))
     const monTax = monthly * .0575
-    const monTot = monTax + monthly - down / Length
+    const monTot = monTax + monthly
     const yearly = monthly * 12
     const yearTax = yearly * .0575
     const yearlytot = yearly + yearTax - down
