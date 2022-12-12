@@ -31,7 +31,7 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('img/Wallpapers/Home_Page_Banner.jpg')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('src/img/Wallpapers/Home_Page_Banner.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/50 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
@@ -93,7 +93,7 @@ export function Home() {
                 <CardHeader className="relative h-56">
                   <img
                     alt="Card Image"
-                    src="/img/Web-Design/Car selling Image.jpg"
+                    src="src/img/Web-Design/Car selling Image.jpg"
                     className="h-full w-full"
                   />
                 </CardHeader>

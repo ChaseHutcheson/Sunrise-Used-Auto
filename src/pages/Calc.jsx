@@ -46,7 +46,7 @@ export function Calc() {
   return (
     <>
       <img
-        src="img\Wallpapers\ferran-fusalba-rosello-WgUHuGSWPVM-unsplash.jpg"
+        src="src\img\Wallpapers\ferran-fusalba-rosello-WgUHuGSWPVM-unsplash.jpg"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
