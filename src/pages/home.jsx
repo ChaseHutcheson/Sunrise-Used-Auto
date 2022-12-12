@@ -98,6 +98,26 @@ export function Home() {
                     src="Logo.png"
                     className="h-full w-full"
                   />
+                  <img
+                    alt="Card Image"
+                    src="./Logo.png"
+                    className="h-full w-full"
+                  />
+                  <img
+                    alt="Card Image"
+                    src="img/Logo.png"
+                    className="h-full w-full"
+                  />
+                  <img
+                    alt="Card Image"
+                    src="./img/Logo.png"
+                    className="h-full w-full"
+                  />
+                  <img
+                    alt="Card Image"
+                    src="../img/Logo.png"
+                    className="h-full w-full"
+                  />
                 </CardHeader>
                 <CardBody>
                   <Typography
