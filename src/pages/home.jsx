@@ -95,7 +95,7 @@ export function Home() {
                 <CardHeader className="relative h-56">
                   <img
                     alt="Card Image"
-                    src="img/Web-Design/Car selling Image.jpg"
+                    src="src/img/Web-Design/Car selling Image.jpg"
                     className="h-full w-full"
                   />
                 </CardHeader>
