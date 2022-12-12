@@ -1,12 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
 import {
   Card,
   CardBody,
   CardHeader,
   Typography,
-  Button,
-  Input,
-  Textarea,
+  Button
 } from "@material-tailwind/react";
 import { UsersIcon } from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";

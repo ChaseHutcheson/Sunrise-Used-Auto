@@ -20,18 +20,6 @@ export const routes = [
     element: <Cars />,
   },
   {
-    icon: ArrowRightOnRectangleIcon,
-    name: "Sign In",
-    path: "/sign-in",
-    element: <SignIn />,
-  },
-  {
-    icon: UserPlusIcon,
-    name: "Sign Up",
-    path: "/sign-up",
-    element: <SignUp />,
-  },
-  {
     icon: UserPlusIcon,
     name: "Loan Calculator",
     path: "/loan-calc",
