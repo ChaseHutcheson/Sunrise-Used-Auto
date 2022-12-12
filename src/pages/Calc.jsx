@@ -41,7 +41,7 @@ export function Calc() {
     const yearly = monthly * 12
     const yearTax = yearly * .0575
     const yearlytot = yearly + yearTax - down
-    console.log(monTot)
+    console.log(intrest)
 
   }
 
