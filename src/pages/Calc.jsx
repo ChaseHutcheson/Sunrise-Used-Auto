@@ -28,11 +28,11 @@ export function Calc() {
     const intrest = 17 - ((credit/50)*.5)+4
     const monthly = ((intrest/12) * (1/(1-(1+intrest/12)**(-Length)))*Price)
     const monTax = monthly * .0575
-    const monTot = monTax + monthly - down / Length
+    const monTot = monTax + monthly - (down / Length)
     const yearly = monthly * 12
     const yearTax = yearly * .0575
     const yearlytot = yearly + yearTax - down
-    console.log(monTot)
+    console.log(intrest)
 
   }
 
