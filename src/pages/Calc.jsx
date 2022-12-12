@@ -24,9 +24,21 @@ export function Calc() {
   const downs = event => {setDown(event.target.value); };
 
   const sub = async () => {
+    var intrest = 0
+    if (credit > 661)
+       intrest = .0403
+    else if (credit > 601)
+      intrest = .0657
+    else if (credit > 501)
+      intrest = .0975
+    else if (credit > 300)
+      intrest = .1284
+    else
+      intrest = 1
+      console.log("ERROR")
     
-    const intrest = 17 - ((credit/50)*.5)+4
-    const monthly = ((intrest/12) * (1/(1-(1+intrest/12)**(-Length)))*Price)
+      
+    const monthly = (Price * intrest) / (1 - (1 + intrest)^(-Length))
     const monTax = monthly * .0575
     const monTot = monTax + monthly - down / Length
     const yearly = monthly * 12
