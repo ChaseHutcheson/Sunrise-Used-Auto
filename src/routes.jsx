@@ -22,18 +22,18 @@ export const routes = [
     path: "/cars",
     element: <Cars />,
   },
-  {
-    icon: ArrowRightOnRectangleIcon,
-    name: "Sign In",
-    path: "/sign-in",
-    element: <SignIn />,
-  },
-  {
-    icon: UserPlusIcon,
-    name: "Sign Up",
-    path: "/sign-up",
-    element: <SignUp />,
-  },
+  // {
+  //   icon: ArrowRightOnRectangleIcon,
+  //   name: "Sign In",
+  //   path: "/sign-in",
+  //   element: <SignIn />,
+  // },
+  // {
+  //   icon: UserPlusIcon,
+  //   name: "Sign Up",
+  //   path: "/sign-up",
+  //   element: <SignUp />,
+  // },
   {
     icon: UserPlusIcon,
     name: "Loan Calculator",

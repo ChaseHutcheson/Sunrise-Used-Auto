@@ -15,7 +15,7 @@ import { Footer, SimpleFooter } from "@/widgets/layout";
 export function Cars() {
   const LoggedIn = 1
   const PostBox = <h1></h1>
-  const clickedthingy = 2
+  // const clickedthingy = 2
   const Post = async () => {clickedthingy = 1}
 
 
