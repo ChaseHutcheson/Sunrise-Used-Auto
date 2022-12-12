@@ -12,7 +12,7 @@ import {
 import { SimpleFooter } from "@/widgets/layout";
 import { useState } from "react";
 export function Calc() {
-
+  const monthly = 0
   const [Price, setPrice] = useState('');
   const [Length, setLength] = useState('');
   const [credit, setCredit] = useState('');
@@ -35,13 +35,13 @@ export function Calc() {
       intrest = .1284
     
       
-    const monthly = (Price * intrest) / (1 - (1 + intrest)**(-Length))
+    monthly = (Price * intrest) / (1 - (1 + intrest)**(-Length))
     const monTax = monthly * .0575
     const monTot = monTax + monthly
     const yearly = monthly * 12
     const yearTax = yearly * .0575
     const yearlytot = yearly + yearTax - down
-    console.log(intrest)
+    console.log(monthly)
 
   }
 
@@ -86,7 +86,25 @@ export function Calc() {
             
           </CardFooter>
         </Card>
-        
+         <Card className=" ml-[400px] absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4" id = "inputs">
+          <CardHeader
+            variant="gradient"
+            color="green"
+            className="mb-4 grid h-28 place-items-center"
+          >
+            <Typography variant="h3" >
+              monthly
+            </Typography>
+          </CardHeader>
+          <CardBody className="flex flex-col gap-4">
+
+          <p>{monthly}</p>
+
+          </CardBody>
+          <CardFooter className="pt-0">
+            
+          </CardFooter>
+        </Card>
 
         
 
