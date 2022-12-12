@@ -1,6 +1,6 @@
 export const carData = [
     {
-      img: "/img/Cars/Car_1.jpg",
+      img: "src/img/Cars/Car_1.jpg",
       title: "2003 Chevy Silverado For Sale",
       price: "$5,000",
       color: "Green",

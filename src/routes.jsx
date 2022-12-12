@@ -6,7 +6,6 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
 } from "@heroicons/react/24/solid";
-import { getAuth, onAuthStateChanged } from "firebase/auth"
 
 
 export const routes = [
@@ -23,37 +22,11 @@ export const routes = [
     element: <Cars />,
   },
   {
-    icon: ArrowRightOnRectangleIcon,
-    name: "Sign In",
-    path: "/sign-in",
-    element: <SignIn />,
-  },
-  {
-    icon: UserPlusIcon,
-    name: "Sign Up",
-    path: "/sign-up",
-    element: <SignUp />,
-  },
-  {
     icon: UserPlusIcon,
     name: "Loan Calculator",
     path: "/loan-calc",
     element: <Calc />,
   }
 ];
-
-const auth = getAuth();
-
-onAuthStateChanged(auth, (user) => {
-  if (user){
-    routes.push({
-    icon: UserCircleIcon,
-    name: "Account",
-    path: "/account",
-    element: "to Do"
-    })
-    
-  }
-})
 
 export default routes;
