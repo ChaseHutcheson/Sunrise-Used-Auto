@@ -16,12 +16,7 @@ function App() {
         )}
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
-        <MessengerCustomerChat
-    pageId="100088634918057"
-    appId="<APP_ID>"
-    htmlRef="<REF_STRING>"
-  />,
-  document.getElementById('demo')
+        <MessengerCustomerChat pageId="100088634918057" appId="703098704735945" />
     </>
   );
 }
