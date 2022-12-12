@@ -16,29 +16,28 @@ export function Calc() {
   const [Price, setPrice] = useState('');
   const [Length, setLength] = useState('');
   const [credit, setCredit] = useState('');
+  const [down, setDown] = useState('');
   
   const cred = event => {setCredit(event.target.value); };
   const prices = event => {setPrice(event.target.value); };
   const lengths = event => {setLength(event.target.value); };
+  const downs = event => {setDown(event.target.value); };
 
   const sub = async () => {
     
+    const intrest = 17 - ((credit/50)*.5)+4
+    const monthly = ((intrest/12) * (1/(1-(1+intrest/12)**(-Length)))*Price)
+    const monTax = monthly * .0575
+    const monTot = monTax + monthly - down / Length
+    const yearly = monthly * 12
+    const yearTax = yearly * .0575
+    const yearlytot = yearly + yearTax - down
+    console.log(monTot)
 
-
-
-    const everything = {credit, Price, Length}
-    console.log(everything)
-    const responce = await fetch('http://127.0.0.1:5000/result', {
-        method: 'POST',
-        headers: {
-            "credit": credit,
-            'price': Price,
-            'length': Length,
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(everything)
-    })
   }
+
+
+  
 
   
 
