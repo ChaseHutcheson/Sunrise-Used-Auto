@@ -95,7 +95,7 @@ export function Home() {
                 <CardHeader className="relative h-56">
                   <img
                     alt="Card Image"
-                    src="src\\Logo.png"
+                    src=".\\src\\Logo.png"
                     className="h-full w-full"
                   />
                   <img
@@ -105,17 +105,17 @@ export function Home() {
                   />
                   <img
                     alt="Card Image"
-                    src="img\\Logo.png"
+                    src=".\\img\\Logo.png"
                     className="h-full w-full"
                   />
                   <img
                     alt="Card Image"
-                    src="./src/img/Logo.png"
+                    src="./img/Logo.png"
                     className="h-full w-full"
                   />
                   <img
                     alt="Card Image"
-                    src="src/img/Logo.png"
+                    src="./Logo.png"
                     className="h-full w-full"
                   />
                 </CardHeader>
