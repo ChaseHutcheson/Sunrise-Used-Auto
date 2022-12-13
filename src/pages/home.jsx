@@ -11,6 +11,7 @@ import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import ContactForm from "@/Components/UseMail";
+import Googleimbed from "@/widgets/layout/Googleimbed";
 
 
 export function Home() {
@@ -165,6 +166,9 @@ export function Home() {
           </PageTitle>
           <ContactForm />
         </div>
+          <div>
+            <Googleimbed />
+          </div>
       </section>
       <div className="bg-blue-gray-50/50">
         <Footer />
