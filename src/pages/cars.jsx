@@ -21,7 +21,7 @@ export function Cars() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-3/5 w-full bg-[url('src/img/Wallpapers/Car_Inv_Banner.jpg')] bg-cover bg-center" />
+        <div className="absolute top-0 h-3/5 w-full bg-[url('https://raw.githubusercontent.com/ChaseHutcheson/Sunrise-Used-Auto/main/src/img/Wallpapers/Car_Inv_Banner.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-3/5 w-full bg-black/50 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
