@@ -11,8 +11,11 @@ import {
 } from "@material-tailwind/react";
 import { SimpleFooter } from "@/widgets/layout";
 import { useState } from "react";
+import CanvasJSReact from './graph/canvasjs.react';
+var CanvasJS = CanvasJSReact.CanvasJS;
+var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 export function Calc() {
-  const monthly = 0
+  var monthly = 0
   const [Price, setPrice] = useState('');
   const [Length, setLength] = useState('');
   const [credit, setCredit] = useState('');
@@ -98,7 +101,7 @@ export function Calc() {
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
 
-          <p>{monthly}</p>
+          <p>monthly:{monthly}</p>
 
           </CardBody>
           <CardFooter className="pt-0">
