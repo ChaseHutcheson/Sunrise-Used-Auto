@@ -56,7 +56,7 @@ export function Calc() {
   return (
     <>
       <img
-        src="src\img\Wallpapers\ferran-fusalba-rosello-WgUHuGSWPVM-unsplash.jpg"
+        src="https://raw.githubusercontent.com/ChaseHutcheson/Sunrise-Used-Auto/main/src/img/Wallpapers/ferran-fusalba-rosello-WgUHuGSWPVM-unsplash.jpg"
         className="absolute inset-0 z-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />

@@ -2,6 +2,9 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { Navbar } from "@/widgets/layout";
 import routes from "@/routes";
 
+// import MessengerCustomerChat from "react-messenger-customer-chat"
+
+
 function App() {
   return (
     <>

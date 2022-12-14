@@ -11,6 +11,7 @@ import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import ContactForm from "@/Components/UseMail";
+import Googleimbed from "@/widgets/layout/Googleimbed";
 
 
 export function Home() {
@@ -31,8 +32,7 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        {/* <div className="absolute top-0 h-full w-full bg-[url('src/img/Wallpapers/Home_Page_Banner.jpg')] bg-cover bg-center" /> */}
-        <div className="absolute top-0 h-full w-full bg-[url('src\\Home_Page_Banner.jpg')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('https://raw.githubusercontent.com/ChaseHutcheson/Sunrise-Used-Auto/main/src/img/Wallpapers/Home_Page_Banner.jpg')] bg-cover bg-center" />
         <div className="absolute top-0 h-full w-full bg-black/50 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
@@ -94,7 +94,7 @@ export function Home() {
                 <CardHeader className="relative h-56">
                   <img
                     alt="Card Image"
-                    src="src/img/Web-Design/Car selling Image.jpg"
+                    src="https://raw.githubusercontent.com/ChaseHutcheson/Sunrise-Used-Auto/main/src/img/Web-Design/Car%20selling%20Image.jpg"
                     className="h-full w-full"
                   />
                 </CardHeader>
@@ -167,6 +167,9 @@ export function Home() {
           </PageTitle>
           <ContactForm />
         </div>
+          <div>
+            <Googleimbed />
+          </div>
       </section>
       <div className="bg-blue-gray-50/50">
         <Footer />
