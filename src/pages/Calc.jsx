@@ -14,6 +14,8 @@ import { useState } from "react";
 
 export function Calc() {
   var monthly = 0
+  var montot = 0
+  var monTax = 0
   const [Price, setPrice] = useState('');
   const [Length, setLength] = useState('');
   const [credit, setCredit] = useState('');
@@ -37,8 +39,8 @@ export function Calc() {
     
       
     monthly = (Price * intrest) / (1 - (1 + intrest)**(-Length))
-    const monTax = monthly * .0575
-    const monTot = monTax + monthly
+     monTax = monthly * .0575
+     monTot = monTax + monthly
     const yearly = monthly * 12
     const yearTax = yearly * .0575
     const yearlytot = yearly + yearTax - down
@@ -94,12 +96,13 @@ export function Calc() {
             className="mb-4 grid h-28 place-items-center"
           >
             <Typography variant="h3" >
-              monthly
+              Price
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
 
-          <p>monthly:{monthly}</p>
+          <p>Monthly total: {montot}</p>
+          <p>Monthly taxes: {monTax}</p>
 
           </CardBody>
           <CardFooter className="pt-0">
