@@ -11,9 +11,7 @@ import {
 } from "@material-tailwind/react";
 import { SimpleFooter } from "@/widgets/layout";
 import { useState } from "react";
-import CanvasJSReact from './graph/canvasjs.react';
-var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
 export function Calc() {
   var monthly = 0
   const [Price, setPrice] = useState('');

@@ -122,6 +122,7 @@ export function Home() {
             Here are the people willing to ensure your next car buying experience
             is as best as it can possiblely be.
           </PageTitle>
+          
           <div className="mt-24 grid grid-cols-1 gap-5 gap-x-30 md:grid-cols-2 xl:grid-cols-3">
             {teamData.map(({ img, name, position}) => (
               <TeamCard
