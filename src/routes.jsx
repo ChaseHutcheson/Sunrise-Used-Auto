@@ -1,4 +1,5 @@
-import { Home, Cars, SignIn, SignUp, Calc } from "@/pages";
+import { Home, Calc } from "@/pages";
+import { Cars } from "@/pages/Cars/Cars"
 import {
   UserCircleIcon,
   HomeIcon,

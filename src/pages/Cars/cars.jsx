@@ -8,16 +8,9 @@ import {
   Input,
   Textarea,
 } from "@material-tailwind/react";
-import CarsCard from "@/widgets/cards/car-cards";
-import carData from "@/data/car-data";
 import { Footer } from "@/widgets/layout";
 
 export function Cars() {
-  const LoggedIn = 1
-  const PostBox = <h1></h1>
-  const Post = async () => {clickedthingy = 1}
- 
-
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
