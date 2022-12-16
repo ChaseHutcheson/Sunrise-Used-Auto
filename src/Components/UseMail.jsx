@@ -54,7 +54,7 @@ const ContactForm = () => {
           rows={8}
         />
       </div>
-      <div className="mb-3 pt-0 con ml-48">
+      <div className="mb-3 pt-0 flex-col">
         <button
           className=" bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 ml-96"
           type="submit"
