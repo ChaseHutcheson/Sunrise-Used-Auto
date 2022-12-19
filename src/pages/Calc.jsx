@@ -14,10 +14,9 @@ import { useState } from "react";
 import ReactDOM from 'react-dom';
 import { render } from "react-dom";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
-import { data } from "autoprefixer";
 export function Calc() {
 
-  var monthly = 1
+  var monthly = 0
   var montot = 0
   var monTax = 0
   const [Price, setPrice] = useState('');
@@ -32,41 +31,35 @@ export function Calc() {
   var clicked1 = 0
   console.log(clicked1)
   const sub = async () => {
-
-    this.state = {test: 1}
+    console.log("I'm Clicking clicking clicking.")
+ 
     
     clicked1 = 1
-    var intrest = 0
+    var interest = 0
     if (credit > 661)
-       intrest = .0403
+       interest = .0403
     else if (credit > 601)
-      intrest = .0657
+      interest = .0657
     else if (credit > 501)
-      intrest = .0975
+      interest = .0975
     else if (credit > 300)
-      intrest = .1284
-    console.log(clicked1)
+      interest = .1284
+
       
-    monthly = (Price * intrest) / (1 - (1 + intrest)**(-Length))
-     monTax = monthly * .0575
-     montot = monTax + monthly - down
+    monthly = (Price * interest) / (1 - (1 + interest)**(-Length))
+    monTax = monthly * .0575
+    montot = monTax + monthly - down
     const yearly = monthly * 12
     const yearTax = yearly * .0575
     const yearlytot = yearly + yearTax - down
 
+    if (isNaN(montot)){
+      montot = "Please enter values to calculate"
+    }
 
+    console.log(""+clicked1+" - Interest rate is "+ interest.toFixed(4)+ "Monthly Total = " +montot)
 
   }
-
-  
-
-  
-
-
-
-  
-
-
 
 
   
@@ -100,7 +93,7 @@ export function Calc() {
 
           </CardBody>
           <CardFooter className="pt-0">
-            <Button variant="gradient" fullWidth color="g reen" onClick={sub}>
+            <Button variant="gradient" fullWidth color="g reen" onClick={sub()}>
             Calculate
             </Button>
             
@@ -121,7 +114,7 @@ export function Calc() {
             <CardBody className="flex flex-col gap-4">
         
           
-          
+          <p>Monthly total: {montot}</p>
           
           
           
@@ -141,8 +134,10 @@ export function Calc() {
       </div>
     </>
   )
-  
 }
+  
+  
+
 export default Calc;
 
 // npm run dev
