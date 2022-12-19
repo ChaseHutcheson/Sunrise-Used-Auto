@@ -23,8 +23,8 @@ export function CarsCard({ id, productName, price, color, productImage, specs })
         <Typography className="text-left font-bold">
           {specs}
         </Typography>
-        <Typography className="font-bold text-green-400 text-left">
-          ${price}
+        <Typography className="font-bold text-green-600 text-left">
+          ${price} Dollars
         </Typography>
       </CardBody>
     </Card>

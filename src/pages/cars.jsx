@@ -29,12 +29,12 @@ export function Cars() {
               >
                 Welcome to the Garage!
 
-                <div class="container text-black">
+                {/* <div class="container text-black">
                 <form className="bg-white p-2 rounded-2xl">
                     <input className="w-96" type="text" name="" id="search-item" placeholder="Search products" onkeyup="search()"/>
                     <script src={Search} />
                 </form>
-              </div>
+              </div> */}
               </Typography>
             </div>
           </div>
@@ -42,7 +42,7 @@ export function Cars() {
       </div>
       <section className="-mt-96 bg-blue-50 px-4 pt-20 pb-48">
         <div className="container mx-auto">
-          <div className="-mt-40 mb-14 grid grid-cols-2 gap-x-5 gap-y-10 gap-x-30 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+          <div className="-mt-40 mb-14 grid grid-cols-2 gap-x-5 gap-y-14 gap-x-30 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           {carData.map(({productName, price, color, productImage, specs}) => (
             <CarsCard
             productName = {productName}
