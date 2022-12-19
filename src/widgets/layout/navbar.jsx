@@ -63,7 +63,7 @@ export function Navbar({ brandName, routes}) {
       <div className="container mx-auto flex items-end justify-between text-white">
         <Link to="/">
           <Typography className="mr-2 ml-2 cursor-pointer py-1.5 font-bold text-xl">
-            {brandName}
+            <div className="flex flex-nowrap"><img className="w-7 h-7" src="https://raw.githubusercontent.com/ChaseHutcheson/Sunrise-Used-Auto/main/src/img/Web-Design/Tab_Logo.png"/><div className="ml-1">{brandName}</div></div>
           </Typography>
         </Link>
         <div className="hidden lg:block">{navList}</div>

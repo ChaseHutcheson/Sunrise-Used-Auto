@@ -15,7 +15,7 @@ export function CarsCard({ id, productName, price, color, productImage, specs })
       <CardBody className="px-6 text-center">
         <Typography variant="h5" className="mb-2 text-left" color="blue-gray">
             <div className="text-center">{productName} </div> 
-            <div>------------------------------------------------------</div>
+            <div className="text-center">--------------------</div>
         </Typography>
         <Typography>
           <div className="text-left font-bold">Color: {color}</div>

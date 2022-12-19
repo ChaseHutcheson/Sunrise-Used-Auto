@@ -1,16 +1,16 @@
 export const teamData = [
   {
-    img: "No_Image_Yet",
+    img: "https://raw.githubusercontent.com/ChaseHutcheson/Sunrise-Used-Auto/main/src/img/Web-Design/Noah.jpg",
     name: "Noah Diana",
     position: "CEO",
   },
   {
-    img: "/img/Team/Jon.png",
+    img: "https://raw.githubusercontent.com/ChaseHutcheson/Sunrise-Used-Auto/main/src/img/Web-Design/Jon.webp",
     name: "Jon Factor",
     position: "Mascot",
   },
   {
-    img: "No_Image_Yet",
+    img: "https://raw.githubusercontent.com/ChaseHutcheson/Sunrise-Used-Auto/main/src/img/Web-Design/Me.webp",
     name: "Chase Hutcheson",
     position: "Inventory Manager",
   },
