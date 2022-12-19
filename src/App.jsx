@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Navbar } from "@/widgets/layout";
-import routes from "routes";
+import routes from "./routes";
 
 function App() {
   return (
