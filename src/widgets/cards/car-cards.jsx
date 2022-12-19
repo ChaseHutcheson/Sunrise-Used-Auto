@@ -6,19 +6,25 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-export function CarsCard({ id, productName, price, color, productImage }) {
+export function CarsCard({ id, productName, price, color, productImage, specs }) {
   return (
     <Card className="rounded-2xl shadow-lg shadow-gray-500/10">
+      <CardHeader className="h-49">
+        <img src={productImage} alt="Car-Photo" className="h-fit w-auto shadow-lg shadow-gray-500/25" />
+      </CardHeader>
       <CardBody className="px-6 text-center">
-        <Typography>
-          <img src={productImage} alt="Car-Photo" className="h-full w-full shadow-lg rounded-2xl shadow-gray-500/25"/>
-          <div className="text-gray-50">.</div>
-        </Typography>
         <Typography variant="h5" className="mb-2 text-left" color="blue-gray">
-          <div>{productName}  {color}</div>
+            <div className="text-center">{productName} </div> 
+            <div>------------------------------------------------------</div>
         </Typography>
-        <Typography className="font-normal text-blue-gray-600 text-left">
-          {price}
+        <Typography>
+          <div className="text-left font-bold">Color: {color}</div>
+        </Typography>
+        <Typography className="text-left font-bold">
+          {specs}
+        </Typography>
+        <Typography className="font-bold text-green-400 text-left">
+          ${price}
         </Typography>
       </CardBody>
     </Card>

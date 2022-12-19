@@ -1,5 +1,5 @@
 import { Home, Calc } from "@/pages";
-import { Cars } from "@/pages/Cars/Cars"
+import { Cars } from "@/pages/cars"
 import {
   UserCircleIcon,
   HomeIcon,
