@@ -53,7 +53,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section className=" -mt-24 bg-blue-50 px-4 pb-20 pt-4">
+      <section className="rounded-3xl -mt-24 bg-blue-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
             {featuresData.map(({ color, title, icon, description }) => (
@@ -115,7 +115,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="px-4 pt-20 pb-48">
+      <section className="rounded-3xl px-4 pt-20 pb-48">
         <div className="container mx-auto">
           <PageTitle heading="Meet The Crew">
             Here are the people willing to ensure your next car buying experience
@@ -134,7 +134,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="relative bg-blue-gray-50/50 py-24 px-4">
+      <section className="rounded-3xl relative bg-blue-gray-50/50 py-24 px-4">
         <div className="container mx-auto">
           <PageTitle heading="Come Down Today!">
             We are open from 10am to 8pm, 7 days a week, every week
