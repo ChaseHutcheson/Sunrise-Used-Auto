@@ -80,14 +80,13 @@ export function Home() {
               >
                 We Care About Our Customers
               </Typography>
-              <Typography className="mb-8 font-normal text-blue-gray-500">
+              <Typography className="mb-8 font-medium text-blue-gray-500">
                 Here at Sunrise Used Automobiles, we not only want to give you the best car at the lowest price,
                 but ensure your experience is as best as it can possiblely be.
                 <br />
                 <br />
                 We dedicate our time to making sure that your matters are taken care of quickly and effectively.
               </Typography>
-              <Button variant="gradient" className="bg-blue-100">read more</Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg shadow-gray-500/10">
