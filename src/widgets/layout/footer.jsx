@@ -36,7 +36,7 @@ export function Footer({ title, description, copyright }) {
 Footer.defaultProps = {
   title: "Sunrise Used Automobiles",
   description:
-    "Hieghest quality cars for The lowest possible prices.",
+    "Heighest quality cars for The lowest possible prices.",
   copyright: (
     <>
       Copyright © {year} Sunrise Used Automobiles by{" "}
