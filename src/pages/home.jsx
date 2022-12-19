@@ -78,7 +78,7 @@ export function Home() {
                 className="mb-3 font-bold"
                 color="blue-gray"
               >
-                We Care About Our Customers
+                We Care About Our Customers!
               </Typography>
               <Typography className="mb-8 font-medium text-blue-gray-500">
                 Here at Sunrise Used Automobiles, we not only want to give you the best car at the lowest price,
