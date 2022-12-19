@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <App />
+        <App classname="overflow-hidden"/>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
