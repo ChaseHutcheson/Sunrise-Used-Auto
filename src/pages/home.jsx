@@ -161,10 +161,14 @@ export function Home() {
               </Card>
             ))}
           </div>
-          <PageTitle heading="Want to be a part of the team?">
-            Fill out this for and will respond in 24 - 48 hours.
-          </PageTitle>
-          <ContactForm />
+          <section className="bg-white p-56 rounded-3xl">
+            <PageTitle heading="Contact Us!">
+              Fill out this for and will respond in 24 - 48 hours.
+            </PageTitle>
+            <p className="flex flex-col items-center mt-10 text-2xl text-blue-gray-500">Our Email: SunriseUsedAutomobiles@gmail.com</p>
+            <p className="flex flex-col items-center font-semibold mt-3 text-md text-blue-gray-500">or fill out this form!</p>
+              <ContactForm />
+          </section>
         </div>
           <div>
             <Googleimbed />
