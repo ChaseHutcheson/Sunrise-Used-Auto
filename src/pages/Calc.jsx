@@ -15,7 +15,9 @@ import ReactDOM from 'react-dom';
 import { render } from "react-dom";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 export function Calc() {
-
+  var yearTax = 0
+  var yearly = 0
+  var yearlytot = 0
   var monthly = 0
   var montot = 0
   var monTax = 0
@@ -49,18 +51,27 @@ export function Calc() {
     monthly = (Price * interest) / (1 - (1 + interest)**(-Length))
     monTax = monthly * .0575
     montot = monTax + monthly - down
-    const yearly = monthly * 12
-    const yearTax = yearly * .0575
-    const yearlytot = yearly + yearTax - down
+     yearly = monthly * 12
+     yearTax = yearly * .0575
+     yearlytot = yearly + yearTax - down
 
     if (isNaN(montot)){
       montot = "Please enter values to calculate"
     }
 
-    console.log(""+clicked1+" - Interest rate is "+ interest.toFixed(4)+ "Monthly Total = " +montot)
-
+  if (isNaN(monTax)){
+    monTax = "Please enter values to calculate"
   }
 
+  if (isNaN(yearlytot)){
+    yearlytot = "Please enter values to calculate"
+  }
+
+  if (isNaN(yearTax)){
+    yearTax = "Please enter values to calculate"
+  }
+
+}
 
   
 
@@ -74,7 +85,7 @@ export function Calc() {
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
       <div className="container mx-auto p-4">
         
-      <Card className="absolute pb-2 top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-full" id = "inputs">
+      <Card className="absolute pb-2 top-2/4 left-3/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-full" id = "inputs">
           <CardHeader
             variant="gradient"
             color="green"
@@ -85,46 +96,27 @@ export function Calc() {
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
-
+          
             <Input variant="standard"  label="Car Price" size="lg" onChange={prices} />
             <Input variant="standard" label="Down Payment"size="lg" />
             <Input variant="standard" label="Length (months)"size="lg"onChange={lengths} />
             <Input variant="standard" label="Credit Score"size="lg"onChange={cred} />
 
           </CardBody>
-          <CardFooter className="pt-0">
-            <Button variant="gradient" fullWidth color="g reen" onClick={sub()}>
+          <CardFooter className="pt-0" >
+            <Button className=" "variant="gradient" fullWidth color="g reen" onClick={sub()}>
             Calculate
             </Button>
             
-          </CardFooter>
-        </Card>
-        
-          <Card className=" ml-[260px] pb-56 absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/3" id = "inputs">
-          <CardHeader
-            variant="gradient"
-            color="green"
-            className="mb-4 grid h-28 place-items-center"
-          >
-            <Typography variant="h3" >
-              Cost
-            </Typography>
-          </CardHeader>
-          
-            <CardBody className="flex flex-col gap-4">
-        
-          
-          <p>Monthly total: {montot}</p>
-          
-          
-          
-          
+            <p>Monthly total: {montot}</p>
+            <p>Monthly Taxes: {monTax}</p>
+            <p>Yearly Total: {yearlytot}</p>
+            <p>Yearly Taxes: {yearTax}</p>
 
-          </CardBody>
-          <CardFooter className="pt-0">
-            
           </CardFooter>
         </Card>
+        
+         
 
         
 
