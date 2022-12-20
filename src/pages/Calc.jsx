@@ -50,25 +50,25 @@ export function Calc() {
       
     monthly = (Price * interest) / (1 - (1 + interest)**(-Length))
     monTax = monthly * .0575
-    montot = monTax + monthly - down
+    montot = monTax + monthly
      yearly = monthly * 12
      yearTax = yearly * .0575
-     yearlytot = yearly + yearTax - down
+     yearlytot = yearly + yearTax
 
     if (isNaN(montot)){
-      montot = "Please enter values to calculate"
+      montot = 0
     }
 
   if (isNaN(monTax)){
-    monTax = "Please enter values to calculate"
+    monTax = 0
   }
 
   if (isNaN(yearlytot)){
-    yearlytot = "Please enter values to calculate"
+    yearlytot = 0
   }
 
   if (isNaN(yearTax)){
-    yearTax = "Please enter values to calculate"
+    yearTax = 0
   }
 
 }
@@ -85,7 +85,7 @@ export function Calc() {
       <div className="absolute inset-0 z-0 h-full w-full bg-black/50" />
       <div className="container mx-auto p-4">
         
-      <Card className="absolute pb-2 top-2/4 left-3/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-full" id = "inputs">
+      <Card className="absolute top-2/4 left-2/4 w-full max-w-[24rem] -translate-y-2/4 -translate-x-2/4" id = "inputs">
           <CardHeader
             variant="gradient"
             color="green"
@@ -96,30 +96,27 @@ export function Calc() {
             </Typography>
           </CardHeader>
           <CardBody className="flex flex-col gap-4">
-          
             <Input variant="standard"  label="Car Price" size="lg" onChange={prices} />
             <Input variant="standard" label="Down Payment"size="lg" />
             <Input variant="standard" label="Length (months)"size="lg"onChange={lengths} />
             <Input variant="standard" label="Credit Score"size="lg"onChange={cred} />
-
           </CardBody>
           <CardFooter className="pt-0" >
-            <Button className=" "variant="gradient" fullWidth color="g reen" onClick={sub()}>
+            <Button className="mb-5 "variant="gradient" fullWidth color="green" onClick={sub()}>
             Calculate
             </Button>
-            
-            <p>Monthly total: {montot}</p>
-            <p>Monthly Taxes: {monTax}</p>
-            <p>Yearly Total: {yearlytot}</p>
-            <p>Yearly Taxes: {yearTax}</p>
-
+              
+              <div className="flex flex-col items-center">
+                <Typography className="mb-3 font-medium">
+                  Results:
+                </Typography>
+                <p className=" font-thin mb-1">Monthly total: {montot.toFixed(2)}</p>
+                <p className=" font-thin mb-1">Monthly Taxes: {monTax.toFixed(2)}</p>
+                <p className=" font-thin mb-1">Yearly Total: {yearlytot.toFixed(2)}</p>
+                <p className=" font-thin mb-1">Yearly Taxes: {yearTax.toFixed(2)}</p>
+              </div>
           </CardFooter>
         </Card>
-        
-         
-
-        
-
       </div>
       <div className="container absolute bottom-6 left-2/4 z-10 mx-auto -translate-x-2/4 text-white">
         <SimpleFooter />
